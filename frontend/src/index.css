@@ -1,0 +1,75 @@
+/* ---------------------------------------------------------------------
+   Design tokens
+   Subject: a field rep logging an HCP interaction, fast, between visits.
+   Palette: cool clinical paper + deep teal (trust/health, not generic
+   hospital blue) + a muted clay accent used sparingly for CTAs, plus
+   semantic sentiment colors. Inter throughout per spec, carrying
+   hierarchy via weight/size/tabular figures rather than a second family.
+--------------------------------------------------------------------- */
+:root {
+  --ink: #12181f;
+  --ink-soft: #4a5661;
+  --paper: #f5f7f6;
+  --panel: #ffffff;
+  --line: #dde3e0;
+  --line-soft: #eaeeec;
+
+  --brand: #1f6f64;
+  --brand-dark: #16544c;
+  --brand-soft: #e4f1ee;
+
+  --accent: #c86b3c;
+  --accent-soft: #f7e6db;
+
+  --positive: #1f7a4d;
+  --positive-soft: #e5f4ec;
+  --neutral-tone: #8a6d1f;
+  --neutral-soft: #f6efdd;
+  --negative: #b23b3b;
+  --negative-soft: #f8e6e6;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+
+  --shadow-card: 0 1px 2px rgba(18, 24, 31, 0.04), 0 8px 24px -12px rgba(18, 24, 31, 0.12);
+
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-feature-settings: 'tnum' 1, 'cv11' 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
